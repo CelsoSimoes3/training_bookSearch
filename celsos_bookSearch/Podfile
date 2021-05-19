@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '13.0'
+
+target 'celsos_bookSearch' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for celsos_bookSearch
+  pod 'SwiftLint'
+  pod 'PromiseKit', '~> 6.8' 
+
+  target 'celsos_bookSearchTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'celsos_bookSearchUITests' do
+    # Pods for testing
+  end
+
+end
