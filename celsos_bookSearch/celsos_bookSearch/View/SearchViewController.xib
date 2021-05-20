@@ -29,9 +29,9 @@
                 </label>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Apple Books" translatesAutoresizingMaskIntoConstraints="NO" id="kA0-RP-0nU">
                     <rect key="frame" x="20" y="114.5" width="374" height="56"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
                 </searchBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RKk-1A-MCr">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="10" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RKk-1A-MCr">
                     <rect key="frame" x="20" y="210" width="374" height="632"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>

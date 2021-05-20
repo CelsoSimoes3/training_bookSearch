@@ -19,10 +19,13 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchesArray.append("Teste")
 
-        //self.view.backgroundColor = .green
-        self.title = "Teste Nav"
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
+        searchBarOutlet.delegate = self
 
         recentSearchesTableViewOutlet.delegate = self
         recentSearchesTableViewOutlet.dataSource = self
@@ -32,16 +35,17 @@ class SearchViewController: UIViewController {
         self.recentSearchesTableViewOutlet.register(searchCellNib, forCellReuseIdentifier:                        self.searchCellIdentifier)
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
-    */
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchBarOutlet.text != "" {
+            searchesArray.append(searchBarOutlet.text ?? "")
+            recentSearchesTableViewOutlet.reloadData()
+        }
+        dismissKeyboard()
+    }
 
 }
 
@@ -64,3 +68,5 @@ extension SearchViewController: UITableViewDataSource {
 
 
 }
+
+extension SearchViewController: UISearchBarDelegate{}
