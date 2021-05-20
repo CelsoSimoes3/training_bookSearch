@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		54444630188A0BB19F36CF8C /* Pods_celsos_bookSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0915AE468D56E8518AA06F9C /* Pods_celsos_bookSearch.framework */; };
+		630629EF2656B4C600551506 /* SearchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630629ED2656B4C600551506 /* SearchesTableViewCell.swift */; };
+		630629F02656B4C600551506 /* SearchesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630629EE2656B4C600551506 /* SearchesTableViewCell.xib */; };
 		63C0B7562655748100EF30AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B7552655748100EF30AA /* AppDelegate.swift */; };
 		63C0B7582655748100EF30AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B7572655748100EF30AA /* SceneDelegate.swift */; };
 		63C0B7602655748100EF30AA /* celsos_bookSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B75E2655748100EF30AA /* celsos_bookSearch.xcdatamodeld */; };
@@ -46,6 +48,8 @@
 		31A475E9EDB0BD133E06C91A /* Pods-celsos_bookSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch.debug.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		4431EBD7785A6E3F67AED800 /* Pods-celsos_bookSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch.release.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch.release.xcconfig"; sourceTree = "<group>"; };
 		4BFDA5552EF5E208CE15D5A8 /* Pods-celsos_bookSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearchTests.release.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearchTests/Pods-celsos_bookSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		630629ED2656B4C600551506 /* SearchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchesTableViewCell.swift; sourceTree = "<group>"; };
+		630629EE2656B4C600551506 /* SearchesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchesTableViewCell.xib; sourceTree = "<group>"; };
 		63C0B7522655748100EF30AA /* celsos_bookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = celsos_bookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C0B7552655748100EF30AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63C0B7572655748100EF30AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 			children = (
 				63C0B79E26557BD800EF30AA /* SearchViewController.swift */,
 				63C0B79F26557BD800EF30AA /* SearchViewController.xib */,
+				630629ED2656B4C600551506 /* SearchesTableViewCell.swift */,
+				630629EE2656B4C600551506 /* SearchesTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				63C0B7652655748200EF30AA /* LaunchScreen.storyboard in Resources */,
 				63C0B7622655748200EF30AA /* Assets.xcassets in Resources */,
 				63C0B7A126557BD800EF30AA /* SearchViewController.xib in Resources */,
+				630629F02656B4C600551506 /* SearchesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C0B7AB26557CB400EF30AA /* SearchViewModel.swift in Sources */,
+				630629EF2656B4C600551506 /* SearchesTableViewCell.swift in Sources */,
 				63C0B7A026557BD800EF30AA /* SearchViewController.swift in Sources */,
 				63C0B7B026557CE600EF30AA /* EmptyFile.swift in Sources */,
 				63C0B7562655748100EF30AA /* AppDelegate.swift in Sources */,
