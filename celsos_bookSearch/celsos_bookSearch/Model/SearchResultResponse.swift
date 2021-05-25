@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 public struct SearchResultResponse: Decodable {
     public let docs: [SearchResult]
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 public struct SearchResult: Decodable, Encodable{
-    var resultCount:Int?
-    var results:[Book]?
+    var resultCount: Int?
+    var results: [Book]?
 }

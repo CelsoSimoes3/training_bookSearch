@@ -8,15 +8,15 @@
 import Foundation
 
 public struct Book: Decodable, Encodable {
-    var artworkUrl60:String?
-    var artworkUrl100:String?
-    var trackName:String?
-    var trackId:Int64?
-    var formattedPrice:String?
-    var releaseDate:String?
-    var artistName:String?
-    var genres:[String]?
-    var description:String?
-    var averageUserRating:Float?
-    var userRatingCount:Int16?
+    var artworkUrl60: String
+    var artworkUrl100: String
+    var trackName: String
+    var trackId: Int
+    var formattedPrice: String
+    var releaseDate: String
+    var artistName: String
+    var genres: [String]
+    var description: String
+    var averageUserRating: Float
+    var userRatingCount: Int
 }

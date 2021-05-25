@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 public struct BookResponse: Decodable {
     public let docs: [Book]
 }

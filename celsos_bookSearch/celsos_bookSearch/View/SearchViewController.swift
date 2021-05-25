@@ -13,10 +13,12 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBarOutlet: UISearchBar!
     @IBOutlet weak var recentSearchesTableViewOutlet: UITableView!
 
+    // MARK: - Variables
     var searchesArray: [String] = []
     let searchCellNibName = "SearchesTableViewCell"
     let searchCellIdentifier = SearchesTableViewCell().searchCellIdentifier
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,29 +29,30 @@ class SearchViewController: UIViewController {
 
         searchBarOutlet.delegate = self
 
+        recentSearchesTableViewOutlet.rowHeight = 44 // Prevents the Heigh Warning
         recentSearchesTableViewOutlet.delegate = self
         recentSearchesTableViewOutlet.dataSource = self
         recentSearchesTableViewOutlet.reloadData()
 
         let searchCellNib = UINib(nibName: searchCellNibName, bundle: Bundle(for: SearchesTableViewCell.self))
-        self.recentSearchesTableViewOutlet.register(searchCellNib, forCellReuseIdentifier:                        self.searchCellIdentifier)
+        self.recentSearchesTableViewOutlet.register(searchCellNib, forCellReuseIdentifier: self.searchCellIdentifier)
     }
 
+    // MARK: - Methods
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if searchBarOutlet.text != "" {
-            searchesArray.append(searchBarOutlet.text ?? "")
+        if let searchBarText = searchBarOutlet.text, !searchBarText.isEmpty, !searchesArray.contains(searchBarText) {
+            searchesArray.append(searchBarText)
             recentSearchesTableViewOutlet.reloadData()
         }
         dismissKeyboard()
     }
-
 }
 
-// MARK: - Exntensions
+// MARK: - Extensions
 extension SearchViewController: UITableViewDelegate {}
 
 extension SearchViewController: UITableViewDataSource {
@@ -65,8 +68,6 @@ extension SearchViewController: UITableViewDataSource {
         cell.setupBookName(searchesArray[indexPath.row])
         return cell
     }
-
-
 }
 
 extension SearchViewController: UISearchBarDelegate{}
