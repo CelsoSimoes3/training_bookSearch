@@ -12,7 +12,7 @@ class SearchesTableViewCell: UITableViewCell {
     @IBOutlet weak var bookNameLabelOutlet: UILabel!
 
     let searchCellIdentifier = "SearchCell"
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -24,5 +24,4 @@ class SearchesTableViewCell: UITableViewCell {
     func setupBookName(_ name: String) {
         bookNameLabelOutlet.text = name
     }
-    
 }

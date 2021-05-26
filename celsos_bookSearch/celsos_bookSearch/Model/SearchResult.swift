@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SearchResult: Decodable, Encodable{
-    var resultCount: Int?
+public struct SearchResult: Decodable, Encodable {
+    var resultCount: Int
     var results: [Book]?
 }

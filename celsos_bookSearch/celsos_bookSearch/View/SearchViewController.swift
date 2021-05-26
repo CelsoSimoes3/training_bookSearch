@@ -61,7 +61,10 @@ extension SearchViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = recentSearchesTableViewOutlet.dequeueReusableCell(withIdentifier: self.searchCellIdentifier, for: indexPath) as? SearchesTableViewCell else {
+        guard let cell = recentSearchesTableViewOutlet.dequeueReusableCell(
+                withIdentifier: self.searchCellIdentifier,
+                for: indexPath) as? SearchesTableViewCell
+        else {
             return UITableViewCell()
         }
 
@@ -70,4 +73,4 @@ extension SearchViewController: UITableViewDataSource {
     }
 }
 
-extension SearchViewController: UISearchBarDelegate{}
+extension SearchViewController: UISearchBarDelegate {}
