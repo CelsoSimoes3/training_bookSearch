@@ -3,11 +3,11 @@
 //  celsos_bookSearchTests
 //
 //  Created by Celso Junio Simões de Oliveira Santos on 19/05/21.
-//
+//  swiftlint:disable type_name
 
 import XCTest
 
-@testable import celsos_bookSearch
+//@testable import celsos_bookSearch
 
 class celsos_bookSearchTests: XCTestCase {
 

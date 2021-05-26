@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import PromiseKit
+//import PromiseKit
 
 //class GetService
 // TO DO
