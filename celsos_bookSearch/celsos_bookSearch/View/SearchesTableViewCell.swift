@@ -9,7 +9,7 @@ import UIKit
 
 class SearchesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var bookNameLabelOutlet: UILabel!
+    @IBOutlet var bookNameLabelOutlet: UILabel!
 
     let searchCellIdentifier = "SearchCell"
 

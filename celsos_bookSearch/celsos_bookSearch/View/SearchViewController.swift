@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var recentSearchesTableViewOutlet: UITableView!
 
     // MARK: - Variables
-    var searchesArray: [String] = []
+    var searchViewModel = SearchViewModel()
     let searchCellNibName = "SearchesTableViewCell"
     let searchCellIdentifier = SearchesTableViewCell().searchCellIdentifier
 
@@ -23,12 +23,10 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
 
         searchBarOutlet.delegate = self
-
         recentSearchesTableViewOutlet.rowHeight = 44 // Prevents the Heigh Warning
         recentSearchesTableViewOutlet.delegate = self
         recentSearchesTableViewOutlet.dataSource = self
@@ -44,8 +42,7 @@ class SearchViewController: UIViewController {
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let searchBarText = searchBarOutlet.text, !searchBarText.isEmpty, !searchesArray.contains(searchBarText) {
-            searchesArray.append(searchBarText)
+        if searchViewModel.validateSearchedWord(searchBarOutlet: searchBar) {
             recentSearchesTableViewOutlet.reloadData()
         }
         dismissKeyboard()
@@ -57,7 +54,7 @@ extension SearchViewController: UITableViewDelegate {}
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        searchesArray.count
+        searchViewModel.searchesArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,7 +65,7 @@ extension SearchViewController: UITableViewDataSource {
             return UITableViewCell()
         }
 
-        cell.setupBookName(searchesArray[indexPath.row])
+        cell.setupBookName(searchViewModel.searchesArray[indexPath.row])
         return cell
     }
 }

@@ -40,4 +40,35 @@ class celsos_bookSearchUITests: XCTestCase {
             }
         }
     }
+
+    func testSearchBarSearchButtonTapAddItemOnTableView() {
+
+        let app = XCUIApplication()
+        app.launchArguments = ["-runningUITests"]
+        app.launch()
+
+        app.searchFields["Apple Books"].tap()
+        app.keys["S"].tap()
+        app.keys["w"].tap()
+        app.keys["i"].tap()
+        app.keys["f"].tap()
+        app.keys["t"].tap()
+        app.buttons["Search"].tap()
+
+        XCTAssertTrue(app.tables.staticTexts["Swift"].exists)
+    }
+
+    func testSearchBarSearchButtonTapDidNotAddEmptyTextOnTableView() {
+
+        let app = XCUIApplication()
+        app.launchArguments = ["-runningUITests"]
+        app.launch()
+
+        let searchField = app.searchFields["Apple Books"]
+        searchField.tap()
+        searchField.typeText("")
+        app.buttons["Search"].tap()
+        XCTAssertFalse(app.tables.staticTexts[""].exists)
+    }
 }
+// May@2021!!
