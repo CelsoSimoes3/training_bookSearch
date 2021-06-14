@@ -144,11 +144,11 @@
 		63C0B7542655748100EF30AA /* celsos_bookSearch */ = {
 			isa = PBXGroup;
 			children = (
-				633914ED2657D6CF0087998F /* Services */,
-				63C0B7A926557C0200EF30AA /* Resources */,
-				63C0B7A826557BFA00EF30AA /* ViewModel */,
-				63C0B7A726557BF400EF30AA /* View */,
 				63C0B7A526557BE000EF30AA /* Model */,
+				63C0B7A726557BF400EF30AA /* View */,
+				63C0B7A826557BFA00EF30AA /* ViewModel */,
+				63C0B7A926557C0200EF30AA /* Resources */,
+				633914ED2657D6CF0087998F /* Services */,
 				63C0B7662655748200EF30AA /* Info.plist */,
 				63C0B75E2655748100EF30AA /* celsos_bookSearch.xcdatamodeld */,
 			);

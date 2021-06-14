@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var recentSearchesTableViewOutlet: UITableView!
 
     // MARK: - Variables
+    let service = Services()
     var searchViewModel = SearchViewModel()
     let searchCellNibName = "SearchesTableViewCell"
     let searchCellIdentifier = SearchesTableViewCell().searchCellIdentifier
@@ -44,8 +45,28 @@ class SearchViewController: UIViewController {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if searchViewModel.validateSearchedWord(searchBarOutlet: searchBar) {
             recentSearchesTableViewOutlet.reloadData()
+            goToResultsPage(searchBar.text!)
         }
         dismissKeyboard()
+    }
+    // MARK: - To Do:
+    // 1 - Prevent error from: a searched word with blank spaces between words
+    // 2 - Finish goToResultsPage function
+    // 3 - Make the Results page with an interactive Table View
+
+    func goToResultsPage(_ term: String) {
+        service.getBooks(term: term)
+            .done { [weak self] weatherInfo in
+                // Pass Data here
+                // Segue here (Optional, can do it in another func too
+                print(weatherInfo)
+            }
+            .catch { [weak self] error in
+              guard let self = self else { return }
+
+                // Make an alert for cases where no results were found
+                print(error)
+            }
     }
 }
 
