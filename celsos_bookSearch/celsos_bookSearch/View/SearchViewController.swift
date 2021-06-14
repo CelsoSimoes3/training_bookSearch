@@ -42,32 +42,11 @@ class SearchViewController: UIViewController {
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // Check if there are blank spaces in the searched word
+        searchBar.text = searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         if searchViewModel.validateSearchedWord(searchBarOutlet: searchBar) {
             recentSearchesTableViewOutlet.reloadData()
         }
         dismissKeyboard()
     }
 }
-
-// MARK: - Extensions
-extension SearchViewController: UITableViewDelegate {}
-
-extension SearchViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        searchViewModel.searchesArray.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = recentSearchesTableViewOutlet.dequeueReusableCell(
-                withIdentifier: self.searchCellIdentifier,
-                for: indexPath) as? SearchesTableViewCell
-        else {
-            return UITableViewCell()
-        }
-
-        cell.setupBookName(searchViewModel.searchesArray[indexPath.row])
-        return cell
-    }
-}
-
-extension SearchViewController: UISearchBarDelegate {}
