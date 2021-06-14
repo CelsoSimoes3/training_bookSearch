@@ -10,7 +10,13 @@ import PromiseKit
 
 class Services {
     func getBooks(term: String) -> Promise<SearchResult> {
-        let urlString = "https://itunes.apple.com/search?term=\(term)&entity=ibook"
+        // Solution for: Term with blank spaces between words
+        let termWithoutSpaces = term.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+
+        // Another approach:
+        //let termWithoutSpaces:String = term.replacingOccurrences(of: " ", with: "%20")
+        
+        let urlString = "https://itunes.apple.com/search?term=\(termWithoutSpaces ?? "")&entity=ibook"
         let url = URL(string: urlString)!
 
         return firstly {

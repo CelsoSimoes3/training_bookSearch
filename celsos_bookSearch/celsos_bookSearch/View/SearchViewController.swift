@@ -50,7 +50,8 @@ class SearchViewController: UIViewController {
         dismissKeyboard()
     }
     // MARK: - To Do:
-    // 1 - Prevent error from: a searched word with blank spaces between words
+    // 1 - Prevent error from: a searched word with blank spaces between words - DONE
+    // 1.2 - Prevent Error with Special characters: '@#$%%@#*'. A Regex could be one approach
     // 2 - Finish goToResultsPage function
     // 3 - Make the Results page with an interactive Table View
 
