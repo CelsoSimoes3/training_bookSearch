@@ -22,21 +22,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lj-Zb-4BC">
-                    <rect key="frame" x="25" y="69" width="112" height="40.5"/>
+                    <rect key="frame" x="25" y="69" width="112" height="41.5"/>
                     <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="35"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.46966582540000001" green="1" blue="0.23498922589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </label>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Apple Books" translatesAutoresizingMaskIntoConstraints="NO" id="kA0-RP-0nU">
-                    <rect key="frame" x="20" y="114.5" width="374" height="56"/>
+                    <rect key="frame" x="20" y="115.5" width="374" height="56"/>
                     <textInputTraits key="textInputTraits" returnKeyType="search"/>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="10" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RKk-1A-MCr">
-                    <rect key="frame" x="20" y="210" width="374" height="632"/>
+                    <rect key="frame" x="20" y="211" width="374" height="631"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRENDING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i0-SN-SpO">
-                    <rect key="frame" x="20" y="190.5" width="61.5" height="14.5"/>
+                    <rect key="frame" x="20" y="191.5" width="61.5" height="14.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <color key="textColor" systemColor="systemGrayColor"/>
                     <nil key="highlightedColor"/>

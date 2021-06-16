@@ -18,6 +18,7 @@
 		633914F92657DB1A0087998F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633914F82657DB1A0087998F /* Book.swift */; };
 		6339150A2657F36B0087998F /* SearchResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633915092657F36B0087998F /* SearchResultResponse.swift */; };
 		6339150F2657F38E0087998F /* BookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339150E2657F38E0087998F /* BookResponse.swift */; };
+		639B4CBD267A7A1B00142CF7 /* UIViewControlerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B4CBC267A7A1B00142CF7 /* UIViewControlerExtensions.swift */; };
 		63C0B7562655748100EF30AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B7552655748100EF30AA /* AppDelegate.swift */; };
 		63C0B7582655748100EF30AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B7572655748100EF30AA /* SceneDelegate.swift */; };
 		63C0B7602655748100EF30AA /* celsos_bookSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B75E2655748100EF30AA /* celsos_bookSearch.xcdatamodeld */; };
@@ -63,6 +64,7 @@
 		633914F82657DB1A0087998F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		633915092657F36B0087998F /* SearchResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultResponse.swift; sourceTree = "<group>"; };
 		6339150E2657F38E0087998F /* BookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookResponse.swift; sourceTree = "<group>"; };
+		639B4CBC267A7A1B00142CF7 /* UIViewControlerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControlerExtensions.swift; sourceTree = "<group>"; };
 		63C0B7522655748100EF30AA /* celsos_bookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = celsos_bookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C0B7552655748100EF30AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63C0B7572655748100EF30AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		639B4CBB267A79FB00142CF7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				639B4CBC267A7A1B00142CF7 /* UIViewControlerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		63C0B7492655748100EF30AA = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +158,7 @@
 		63C0B7542655748100EF30AA /* celsos_bookSearch */ = {
 			isa = PBXGroup;
 			children = (
+				639B4CBB267A79FB00142CF7 /* Extensions */,
 				63C0B7A526557BE000EF30AA /* Model */,
 				63C0B7A726557BF400EF30AA /* View */,
 				63C0B7A826557BFA00EF30AA /* ViewModel */,
@@ -507,6 +518,7 @@
 				630629EF2656B4C600551506 /* SearchesTableViewCell.swift in Sources */,
 				630693862677E13C007A366C /* BooksViewController.swift in Sources */,
 				63C0B7A026557BD800EF30AA /* SearchViewController.swift in Sources */,
+				639B4CBD267A7A1B00142CF7 /* UIViewControlerExtensions.swift in Sources */,
 				633914EF2657D6EE0087998F /* GetService.swift in Sources */,
 				6339150A2657F36B0087998F /* SearchResultResponse.swift in Sources */,
 				6329BA79265D4D4E004D90B6 /* SearchCellViewModel.swift in Sources */,
