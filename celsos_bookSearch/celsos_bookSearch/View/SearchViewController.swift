@@ -3,7 +3,7 @@
 //  celsos_bookSearch
 //
 //  Created by Celso Junio Simões de Oliveira Santos on 19/05/21.
-//
+//  swiftlint:disable line_length
 
 import UIKit
 
@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var recentSearchesTableViewOutlet: UITableView!
 
     // MARK: - Variables
-    let service = Services()
+    let service = GetService()
     var searchViewModel = SearchViewModel()
     let searchCellNibName = "SearchesTableViewCell"
     let searchCellIdentifier = SearchesTableViewCell().searchCellIdentifier
@@ -42,7 +42,7 @@ class SearchViewController: UIViewController {
         view.endEditing(true)
     }
 
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if searchViewModel.validateSearchedWord(searchBarOutlet: searchBar) {
             recentSearchesTableViewOutlet.reloadData()
             goToResultsPage(searchBar.text!)
@@ -52,24 +52,16 @@ class SearchViewController: UIViewController {
         dismissKeyboard()
     }
 
-    // MARK: - To Do:
-    // 1 - Prevent error from: a searched word with blank spaces between words - DONE
-    // 1.2 - Prevent Error with Special characters: '@#$%%@#*'. A Regex could be one approach - DONE
-    // 2 - Finish goToResultsPage function
-    // 3 - Make the Results page with an interactive Table View
-
     func goToResultsPage(_ term: String) {
         service.getBooks(term: term)
-            .done { [weak self] weatherInfo in
+            .done { [weak self] _ in
                 // Pass Data here
-                // Segue here (Optional, can do it in another func too
-                print(weatherInfo)
+                let booksViewController = BooksViewController(nibName: "BooksViewController", bundle: nil)
+                self?.navigationController?.pushViewController(booksViewController, animated: false)
             }
-            .catch { [weak self] error in
+            .catch { [weak self] _ in
               guard let self = self else { return }
-
-                // Make an alert for cases where no results were found
-                print(error)
+                self.showAlert(title: "Error", message: "An error has ocurred. Please try again")
             }
     }
 }

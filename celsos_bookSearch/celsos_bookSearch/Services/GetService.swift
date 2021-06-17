@@ -8,7 +8,7 @@
 import Foundation
 import PromiseKit
 
-class Services {
+class GetService {
     func getBooks(term: String) -> Promise<SearchResult> {
         // Solution for: Term with blank spaces between words
         let termWithoutSpaces = term.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)

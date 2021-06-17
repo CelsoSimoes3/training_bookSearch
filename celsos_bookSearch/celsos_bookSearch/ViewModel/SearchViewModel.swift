@@ -14,11 +14,11 @@ class SearchViewModel {
     public var invalidWordAlertMessage = "Please enter a valid Book name"
 
     func validateSearchedWord(searchBarOutlet: UISearchBar) -> Bool {
-        let nameRegex = "[A-Z0-9a-z]{3,}" // Regex to prevent bad characters input
+        let nameRegex = "[A-Z0-9a-z .]{1,}" // Regex to prevent bad characters input
         let namePred = NSPredicate(format: "SELF MATCHES %@", nameRegex)
 
         if let searchBarText = searchBarOutlet.text, !searchBarText.isEmpty,
-           !searchesArray.contains(searchBarText), namePred.evaluate(with: searchBarOutlet.text) {
+           !searchesArray.contains(searchBarText), namePred.evaluate(with: searchBarText) {
             searchesArray.append(searchBarText)
             return true
         }
