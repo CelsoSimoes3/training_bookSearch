@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="celsos_bookSearch" customModuleProvider="target">
             <connections>
+                <outlet property="recentSearchesTableViewOutlet" destination="RKk-1A-MCr" id="mlO-mR-waj"/>
+                <outlet property="searchBarOutlet" destination="kA0-RP-0nU" id="yas-Rf-cos"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,25 +21,51 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zo-Ol-eiz">
-                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lj-Zb-4BC">
+                    <rect key="frame" x="25" y="69" width="112" height="40.5"/>
+                    <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="35"/>
                     <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Apple Books" translatesAutoresizingMaskIntoConstraints="NO" id="kA0-RP-0nU">
+                    <rect key="frame" x="20" y="114.5" width="374" height="56"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="10" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RKk-1A-MCr">
+                    <rect key="frame" x="20" y="210" width="374" height="632"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRENDING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i0-SN-SpO">
+                    <rect key="frame" x="20" y="190.5" width="61.5" height="14.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                    <color key="textColor" systemColor="systemGrayColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="0zo-Ol-eiz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MAw-LA-yJu"/>
-                <constraint firstItem="0zo-Ol-eiz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="YPP-Pp-e1g"/>
+                <constraint firstItem="0lj-Zb-4BC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="0i0-hy-wSW"/>
+                <constraint firstItem="4i0-SN-SpO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="1nu-h1-IxD"/>
+                <constraint firstItem="RKk-1A-MCr" firstAttribute="top" secondItem="4i0-SN-SpO" secondAttribute="bottom" constant="5" id="BlH-UO-84I"/>
+                <constraint firstItem="0lj-Zb-4BC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="Cs9-P9-2FJ"/>
+                <constraint firstItem="RKk-1A-MCr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LrU-tz-DqE"/>
+                <constraint firstItem="4i0-SN-SpO" firstAttribute="top" secondItem="kA0-RP-0nU" secondAttribute="bottom" constant="20" id="Ou6-v8-CY2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kA0-RP-0nU" secondAttribute="trailing" constant="20" id="Skx-ua-Krw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RKk-1A-MCr" secondAttribute="trailing" constant="20" id="WxY-ai-5Ql"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RKk-1A-MCr" secondAttribute="bottom" constant="20" id="ZGS-xK-XVA"/>
+                <constraint firstItem="kA0-RP-0nU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="eZh-nT-0qR"/>
+                <constraint firstItem="kA0-RP-0nU" firstAttribute="top" secondItem="0lj-Zb-4BC" secondAttribute="bottom" constant="5" id="mvp-yg-3lk"/>
             </constraints>
-            <point key="canvasLocation" x="-197" y="131"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="130.58035714285714"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

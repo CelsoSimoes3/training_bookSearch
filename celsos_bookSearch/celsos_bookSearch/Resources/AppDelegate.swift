@@ -3,7 +3,7 @@
 //  celsos_bookSearch
 //
 //  Created by Celso Junio Simões de Oliveira Santos on 19/05/21.
-//
+// swiftlint:disable line_length
 
 import UIKit
 import CoreData
@@ -13,13 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//
-//        let mainVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
-//
-//        let navigationController = UINavigationController(rootViewController: mainVC)
-//        window?.rootViewController = navigationController
-//        window?.makeKeyAndVisible()
         return true
     }
 
@@ -47,11 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentCloudKitContainer(name: "celsos_bookSearch")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
                 /*
                  Typical reasons for an error here include:
                  * The parent directory does not exist, cannot be created, or disallows writing.
@@ -81,6 +73,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
-

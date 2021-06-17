@@ -3,32 +3,24 @@
 //  celsos_bookSearchUITests
 //
 //  Created by Celso Junio Simões de Oliveira Santos on 19/05/21.
-//
+//  swiftlint:disable type_name
 
 import XCTest
 
 class celsos_bookSearchUITests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        try super.setUpWithError()
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        try super.tearDownWithError()
     }
 
     func testExample() throws {
-        // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testLaunchPerformance() throws {
@@ -38,5 +30,30 @@ class celsos_bookSearchUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+
+    func testSearchBarSearchButtonTapAddItemOnTableView() {
+
+        let app = XCUIApplication()
+        app.launchArguments = ["-runningUITests"]
+        app.launch()
+
+        let searchTextField = app.searchFields["Apple Books"]
+        searchTextField.tap()
+        searchTextField.typeText("Swift")
+        app.keyboards.buttons["Search"].tap()
+        XCTAssertTrue(app.tables.cells.staticTexts["Swift"].exists)
+    }
+
+    func testSearchBarSearchButtonTapDidNotAddEmptyTextOnTableView() {
+
+        let app = XCUIApplication()
+        app.launchArguments = ["-runningUITests"]
+        app.launch()
+
+        let searchField = app.searchFields["Apple Books"]
+        searchField.tap()
+        app.keyboards.buttons["Search"].tap()
+        XCTAssertFalse(app.tables.cells.staticTexts[""].exists)
     }
 }

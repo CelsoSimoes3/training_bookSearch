@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54444630188A0BB19F36CF8C /* Pods_celsos_bookSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0915AE468D56E8518AA06F9C /* Pods_celsos_bookSearch.framework */; };
+		038875BACA1A3BC1553DD3EE /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DDEDC9071057A430D08722 /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework */; };
+		630629EF2656B4C600551506 /* SearchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630629ED2656B4C600551506 /* SearchesTableViewCell.swift */; };
+		630629F02656B4C600551506 /* SearchesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630629EE2656B4C600551506 /* SearchesTableViewCell.xib */; };
+		6329BA79265D4D4E004D90B6 /* SearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329BA78265D4D4E004D90B6 /* SearchCellViewModel.swift */; };
+		633914EF2657D6EE0087998F /* GetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633914EE2657D6EE0087998F /* GetService.swift */; };
+		633914F42657DAE10087998F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633914F32657DAE10087998F /* SearchResult.swift */; };
+		633914F92657DB1A0087998F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633914F82657DB1A0087998F /* Book.swift */; };
+		6339150A2657F36B0087998F /* SearchResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633915092657F36B0087998F /* SearchResultResponse.swift */; };
+		6339150F2657F38E0087998F /* BookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339150E2657F38E0087998F /* BookResponse.swift */; };
+		63480A972677A70900F504CB /* SearchViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63480A962677A70900F504CB /* SearchViewControllerExtensions.swift */; };
 		63C0B7562655748100EF30AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B7552655748100EF30AA /* AppDelegate.swift */; };
 		63C0B7582655748100EF30AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B7572655748100EF30AA /* SceneDelegate.swift */; };
 		63C0B7602655748100EF30AA /* celsos_bookSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B75E2655748100EF30AA /* celsos_bookSearch.xcdatamodeld */; };
@@ -18,9 +27,8 @@
 		63C0B7A026557BD800EF30AA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B79E26557BD800EF30AA /* SearchViewController.swift */; };
 		63C0B7A126557BD800EF30AA /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C0B79F26557BD800EF30AA /* SearchViewController.xib */; };
 		63C0B7AB26557CB400EF30AA /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B7AA26557CB400EF30AA /* SearchViewModel.swift */; };
-		63C0B7B026557CE600EF30AA /* EmptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0B7AF26557CE600EF30AA /* EmptyFile.swift */; };
-		91258CD09068F9D75AE982D2 /* Pods_celsos_bookSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE57FDDB515D71CA6FEE6EC0 /* Pods_celsos_bookSearchTests.framework */; };
-		E58FDCAF093FA93E1EF5E68F /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C583694FD2AC81E6B1023CA /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework */; };
+		7700915736F25D2296F119B1 /* Pods_celsos_bookSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B847C53D6F072A847A82DB15 /* Pods_celsos_bookSearchTests.framework */; };
+		CC5F9B24528A8585E0868639 /* Pods_celsos_bookSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51D317FFEB707FE38506D0D /* Pods_celsos_bookSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0915AE468D56E8518AA06F9C /* Pods_celsos_bookSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_celsos_bookSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F6D2C250845798355677658 /* Pods-celsos_bookSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearchTests/Pods-celsos_bookSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
-		31A475E9EDB0BD133E06C91A /* Pods-celsos_bookSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch.debug.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch.debug.xcconfig"; sourceTree = "<group>"; };
-		4431EBD7785A6E3F67AED800 /* Pods-celsos_bookSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch.release.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch.release.xcconfig"; sourceTree = "<group>"; };
-		4BFDA5552EF5E208CE15D5A8 /* Pods-celsos_bookSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearchTests.release.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearchTests/Pods-celsos_bookSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		0EC476B1C458717E98AB2E30 /* Pods-celsos_bookSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearchTests/Pods-celsos_bookSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		21DDEDC9071057A430D08722 /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_celsos_bookSearch_celsos_bookSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A0175F680546CAF10F5E13 /* Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		630629ED2656B4C600551506 /* SearchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchesTableViewCell.swift; sourceTree = "<group>"; };
+		630629EE2656B4C600551506 /* SearchesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchesTableViewCell.xib; sourceTree = "<group>"; };
+		6329BA78265D4D4E004D90B6 /* SearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewModel.swift; sourceTree = "<group>"; };
+		633914EE2657D6EE0087998F /* GetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetService.swift; sourceTree = "<group>"; };
+		633914F32657DAE10087998F /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		633914F82657DB1A0087998F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		633915092657F36B0087998F /* SearchResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultResponse.swift; sourceTree = "<group>"; };
+		6339150E2657F38E0087998F /* BookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookResponse.swift; sourceTree = "<group>"; };
+		63480A962677A70900F504CB /* SearchViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerExtensions.swift; sourceTree = "<group>"; };
 		63C0B7522655748100EF30AA /* celsos_bookSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = celsos_bookSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C0B7552655748100EF30AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63C0B7572655748100EF30AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,11 +77,12 @@
 		63C0B79E26557BD800EF30AA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		63C0B79F26557BD800EF30AA /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		63C0B7AA26557CB400EF30AA /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		63C0B7AF26557CE600EF30AA /* EmptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFile.swift; sourceTree = "<group>"; };
-		9C583694FD2AC81E6B1023CA /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_celsos_bookSearch_celsos_bookSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA323F2D7F7F1E53B6349723 /* Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
-		ADDA59A133A0349E21781861 /* Pods-celsos_bookSearch-celsos_bookSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch-celsos_bookSearchUITests.debug.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BE57FDDB515D71CA6FEE6EC0 /* Pods_celsos_bookSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_celsos_bookSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B54847C9A1DA680DAD4076 /* Pods-celsos_bookSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch.debug.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		9E50BDFE8BF4F1D4D1AC6A94 /* Pods-celsos_bookSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearchTests.release.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearchTests/Pods-celsos_bookSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		A49CABF9AFC02B5401B2F57C /* Pods-celsos_bookSearch-celsos_bookSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch-celsos_bookSearchUITests.debug.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B847C53D6F072A847A82DB15 /* Pods_celsos_bookSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_celsos_bookSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED239DF88149E9639AE9D16 /* Pods-celsos_bookSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch.release.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch.release.xcconfig"; sourceTree = "<group>"; };
+		F51D317FFEB707FE38506D0D /* Pods_celsos_bookSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_celsos_bookSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54444630188A0BB19F36CF8C /* Pods_celsos_bookSearch.framework in Frameworks */,
+				CC5F9B24528A8585E0868639 /* Pods_celsos_bookSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91258CD09068F9D75AE982D2 /* Pods_celsos_bookSearchTests.framework in Frameworks */,
+				7700915736F25D2296F119B1 /* Pods_celsos_bookSearchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,21 +106,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E58FDCAF093FA93E1EF5E68F /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework in Frameworks */,
+				038875BACA1A3BC1553DD3EE /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2231C32CE7D617B1D9E99470 /* Frameworks */ = {
+		633914ED2657D6CF0087998F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0915AE468D56E8518AA06F9C /* Pods_celsos_bookSearch.framework */,
-				9C583694FD2AC81E6B1023CA /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework */,
-				BE57FDDB515D71CA6FEE6EC0 /* Pods_celsos_bookSearchTests.framework */,
+				633914EE2657D6EE0087998F /* GetService.swift */,
 			);
-			name = Frameworks;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		63480A952677A6E100F504CB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63480A962677A70900F504CB /* SearchViewControllerExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		63C0B7492655748100EF30AA = {
@@ -115,7 +137,7 @@
 				63C0B7792655748200EF30AA /* celsos_bookSearchUITests */,
 				63C0B7532655748100EF30AA /* Products */,
 				E2575B28248AA422DA6C2E29 /* Pods */,
-				2231C32CE7D617B1D9E99470 /* Frameworks */,
+				7A7C1962CA39740683B0489D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,10 +154,12 @@
 		63C0B7542655748100EF30AA /* celsos_bookSearch */ = {
 			isa = PBXGroup;
 			children = (
-				63C0B7A926557C0200EF30AA /* Resources */,
-				63C0B7A826557BFA00EF30AA /* ViewModel */,
-				63C0B7A726557BF400EF30AA /* View */,
 				63C0B7A526557BE000EF30AA /* Model */,
+				63C0B7A726557BF400EF30AA /* View */,
+				63C0B7A826557BFA00EF30AA /* ViewModel */,
+				63480A952677A6E100F504CB /* Extensions */,
+				63C0B7A926557C0200EF30AA /* Resources */,
+				633914ED2657D6CF0087998F /* Services */,
 				63C0B7662655748200EF30AA /* Info.plist */,
 				63C0B75E2655748100EF30AA /* celsos_bookSearch.xcdatamodeld */,
 			);
@@ -163,7 +187,10 @@
 		63C0B7A526557BE000EF30AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				63C0B7AF26557CE600EF30AA /* EmptyFile.swift */,
+				633914F32657DAE10087998F /* SearchResult.swift */,
+				633914F82657DB1A0087998F /* Book.swift */,
+				633915092657F36B0087998F /* SearchResultResponse.swift */,
+				6339150E2657F38E0087998F /* BookResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +200,8 @@
 			children = (
 				63C0B79E26557BD800EF30AA /* SearchViewController.swift */,
 				63C0B79F26557BD800EF30AA /* SearchViewController.xib */,
+				630629ED2656B4C600551506 /* SearchesTableViewCell.swift */,
+				630629EE2656B4C600551506 /* SearchesTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				63C0B7AA26557CB400EF30AA /* SearchViewModel.swift */,
+				6329BA78265D4D4E004D90B6 /* SearchCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -196,15 +226,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7A7C1962CA39740683B0489D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F51D317FFEB707FE38506D0D /* Pods_celsos_bookSearch.framework */,
+				21DDEDC9071057A430D08722 /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework */,
+				B847C53D6F072A847A82DB15 /* Pods_celsos_bookSearchTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E2575B28248AA422DA6C2E29 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				31A475E9EDB0BD133E06C91A /* Pods-celsos_bookSearch.debug.xcconfig */,
-				4431EBD7785A6E3F67AED800 /* Pods-celsos_bookSearch.release.xcconfig */,
-				ADDA59A133A0349E21781861 /* Pods-celsos_bookSearch-celsos_bookSearchUITests.debug.xcconfig */,
-				AA323F2D7F7F1E53B6349723 /* Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig */,
-				1F6D2C250845798355677658 /* Pods-celsos_bookSearchTests.debug.xcconfig */,
-				4BFDA5552EF5E208CE15D5A8 /* Pods-celsos_bookSearchTests.release.xcconfig */,
+				81B54847C9A1DA680DAD4076 /* Pods-celsos_bookSearch.debug.xcconfig */,
+				CED239DF88149E9639AE9D16 /* Pods-celsos_bookSearch.release.xcconfig */,
+				A49CABF9AFC02B5401B2F57C /* Pods-celsos_bookSearch-celsos_bookSearchUITests.debug.xcconfig */,
+				56A0175F680546CAF10F5E13 /* Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig */,
+				0EC476B1C458717E98AB2E30 /* Pods-celsos_bookSearchTests.debug.xcconfig */,
+				9E50BDFE8BF4F1D4D1AC6A94 /* Pods-celsos_bookSearchTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -216,11 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63C0B77F2655748200EF30AA /* Build configuration list for PBXNativeTarget "celsos_bookSearch" */;
 			buildPhases = (
-				8140CF7EE41DE93A1F538676 /* [CP] Check Pods Manifest.lock */,
+				3E4CD00964BAC2B6300CD875 /* [CP] Check Pods Manifest.lock */,
+				6329BA80265D6CB9004D90B6 /* ShellScript */,
 				63C0B74E2655748100EF30AA /* Sources */,
 				63C0B74F2655748100EF30AA /* Frameworks */,
 				63C0B7502655748100EF30AA /* Resources */,
-				2FA898DD0219569A38D1CB57 /* [CP] Embed Pods Frameworks */,
+				70FAEC22AE7D3F476069D81C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,7 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63C0B7822655748200EF30AA /* Build configuration list for PBXNativeTarget "celsos_bookSearchTests" */;
 			buildPhases = (
-				3F56D51A7CDB9748C1862194 /* [CP] Check Pods Manifest.lock */,
+				365F1A07940AE815D9AF1163 /* [CP] Check Pods Manifest.lock */,
 				63C0B7672655748200EF30AA /* Sources */,
 				63C0B7682655748200EF30AA /* Frameworks */,
 				63C0B7692655748200EF30AA /* Resources */,
@@ -254,11 +295,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63C0B7852655748200EF30AA /* Build configuration list for PBXNativeTarget "celsos_bookSearchUITests" */;
 			buildPhases = (
-				787CFE00CE15A8A9671BD2BB /* [CP] Check Pods Manifest.lock */,
+				EBEBBF2CC1200F9D652DFE76 /* [CP] Check Pods Manifest.lock */,
 				63C0B7722655748200EF30AA /* Sources */,
 				63C0B7732655748200EF30AA /* Frameworks */,
 				63C0B7742655748200EF30AA /* Resources */,
-				C0D59557532614C499FB32D8 /* [CP] Embed Pods Frameworks */,
+				17B105FF6354564F59DED90A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,6 +361,7 @@
 				63C0B7652655748200EF30AA /* LaunchScreen.storyboard in Resources */,
 				63C0B7622655748200EF30AA /* Assets.xcassets in Resources */,
 				63C0B7A126557BD800EF30AA /* SearchViewController.xib in Resources */,
+				630629F02656B4C600551506 /* SearchesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,24 +382,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2FA898DD0219569A38D1CB57 /* [CP] Embed Pods Frameworks */ = {
+		17B105FF6354564F59DED90A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3F56D51A7CDB9748C1862194 /* [CP] Check Pods Manifest.lock */ = {
+		365F1A07940AE815D9AF1163 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,29 +421,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		787CFE00CE15A8A9671BD2BB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-celsos_bookSearch-celsos_bookSearchUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8140CF7EE41DE93A1F538676 /* [CP] Check Pods Manifest.lock */ = {
+		3E4CD00964BAC2B6300CD875 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,21 +443,60 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C0D59557532614C499FB32D8 /* [CP] Embed Pods Frameworks */ = {
+		6329BA80265D6CB9004D90B6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+			);
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		70FAEC22AE7D3F476069D81C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-celsos_bookSearch/Pods-celsos_bookSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBEBBF2CC1200F9D652DFE76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-celsos_bookSearch-celsos_bookSearchUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -448,11 +507,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C0B7AB26557CB400EF30AA /* SearchViewModel.swift in Sources */,
+				633914F42657DAE10087998F /* SearchResult.swift in Sources */,
+				630629EF2656B4C600551506 /* SearchesTableViewCell.swift in Sources */,
 				63C0B7A026557BD800EF30AA /* SearchViewController.swift in Sources */,
-				63C0B7B026557CE600EF30AA /* EmptyFile.swift in Sources */,
+				633914EF2657D6EE0087998F /* GetService.swift in Sources */,
+				6339150A2657F36B0087998F /* SearchResultResponse.swift in Sources */,
+				6329BA79265D4D4E004D90B6 /* SearchCellViewModel.swift in Sources */,
 				63C0B7562655748100EF30AA /* AppDelegate.swift in Sources */,
 				63C0B7582655748100EF30AA /* SceneDelegate.swift in Sources */,
+				633914F92657DB1A0087998F /* Book.swift in Sources */,
 				63C0B7602655748100EF30AA /* celsos_bookSearch.xcdatamodeld in Sources */,
+				63480A972677A70900F504CB /* SearchViewControllerExtensions.swift in Sources */,
+				6339150F2657F38E0087998F /* BookResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +683,7 @@
 		};
 		63C0B7802655748200EF30AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31A475E9EDB0BD133E06C91A /* Pods-celsos_bookSearch.debug.xcconfig */;
+			baseConfigurationReference = 81B54847C9A1DA680DAD4076 /* Pods-celsos_bookSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -636,7 +702,7 @@
 		};
 		63C0B7812655748200EF30AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4431EBD7785A6E3F67AED800 /* Pods-celsos_bookSearch.release.xcconfig */;
+			baseConfigurationReference = CED239DF88149E9639AE9D16 /* Pods-celsos_bookSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -655,7 +721,7 @@
 		};
 		63C0B7832655748200EF30AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F6D2C250845798355677658 /* Pods-celsos_bookSearchTests.debug.xcconfig */;
+			baseConfigurationReference = 0EC476B1C458717E98AB2E30 /* Pods-celsos_bookSearchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -677,7 +743,7 @@
 		};
 		63C0B7842655748200EF30AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BFDA5552EF5E208CE15D5A8 /* Pods-celsos_bookSearchTests.release.xcconfig */;
+			baseConfigurationReference = 9E50BDFE8BF4F1D4D1AC6A94 /* Pods-celsos_bookSearchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -699,7 +765,7 @@
 		};
 		63C0B7862655748200EF30AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADDA59A133A0349E21781861 /* Pods-celsos_bookSearch-celsos_bookSearchUITests.debug.xcconfig */;
+			baseConfigurationReference = A49CABF9AFC02B5401B2F57C /* Pods-celsos_bookSearch-celsos_bookSearchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -719,7 +785,7 @@
 		};
 		63C0B7872655748200EF30AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA323F2D7F7F1E53B6349723 /* Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig */;
+			baseConfigurationReference = 56A0175F680546CAF10F5E13 /* Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
