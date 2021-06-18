@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var recentSearchesTableViewOutlet: UITableView!
 
     // MARK: - Variables
-    let service = GetService()
+    var service = GetService()
     var searchViewModel = SearchViewModel()
     let searchCellNibName = "SearchesTableViewCell"
     let searchCellIdentifier = SearchesTableViewCell().searchCellIdentifier
@@ -59,9 +59,9 @@ class SearchViewController: UIViewController {
                 let booksViewController = BooksViewController(nibName: "BooksViewController", bundle: nil)
                 self?.navigationController?.pushViewController(booksViewController, animated: false)
             }
-            .catch { [weak self] _ in
+            .catch { [weak self] error in
               guard let self = self else { return }
-                self.showAlert(title: "Error", message: "An error has ocurred. Please try again")
+                self.showAlert(title: "Error", message: "An error has occurred. Please try again")
             }
     }
 }

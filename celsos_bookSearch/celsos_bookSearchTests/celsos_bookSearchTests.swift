@@ -60,6 +60,19 @@ class celsos_bookSearchTests: XCTestCase {
         XCTAssertTrue(sut.searchViewModel.searchesArray.isEmpty)
     }
 
+    func testValidSearchedWordBeingAddedToTableEvenWithConnectionError() {
+        // given
+        let searchedWord = "Connection Issues"
+
+        // when
+        searchBar.text = searchedWord
+        sut.service = MockGetService()
+        sut.searchBarSearchButtonClicked(searchBar)
+
+        // then
+        XCTAssertFalse(sut.searchViewModel.searchesArray.isEmpty)
+    }
+
     func testSetupCellLabelText() {
         // given
         let searchCell = SearchesTableViewCell()

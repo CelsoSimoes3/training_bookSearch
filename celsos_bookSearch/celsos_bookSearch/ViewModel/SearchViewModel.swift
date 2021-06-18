@@ -17,9 +17,10 @@ class SearchViewModel {
         let nameRegex = "[A-Z0-9a-z .]{1,}" // Regex to prevent bad characters input
         let namePred = NSPredicate(format: "SELF MATCHES %@", nameRegex)
 
-        if let searchBarText = searchBarOutlet.text, !searchBarText.isEmpty,
-           !searchesArray.contains(searchBarText), namePred.evaluate(with: searchBarText) {
-            searchesArray.append(searchBarText)
+        if let searchBarText = searchBarOutlet.text, !searchBarText.isEmpty, namePred.evaluate(with: searchBarText) {
+            if !searchesArray.contains(searchBarText) {
+                searchesArray.append(searchBarText)
+            }
             return true
         }
         return false

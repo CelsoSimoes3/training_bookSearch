@@ -3,7 +3,7 @@
 //  celsos_bookSearchTests
 //
 //  Created by Celso Junio Simões de Oliveira Santos on 17/06/21.
-//
+//  swiftlint:disable line_length
 
 import XCTest
 import PromiseKit
@@ -11,7 +11,7 @@ import PromiseKit
 
 class MockGetService: GetService {
     override func getBooks(term: String) -> Promise<SearchResult> {
-        let urlString = "https://itunes.apple.com/search?term=\(term)&entity=ibook"
+        let urlString = "https://itunes.apple.com/search?ter"
         let url = URL(string: urlString)!
 
         return firstly {
@@ -22,64 +22,37 @@ class MockGetService: GetService {
     }
 }
 
+class MockURLSession: UrlSessionProtocol {
+    func dataTask(_: PMKNamespacer, with convertible: URLRequestConvertible) -> Promise<(data: Data, response: URLResponse)> {
+        return Promise.init(error: ServiceError.internetConnectionError)
+    }
+}
+
 class ServiceBookSearchTests: XCTestCase {
 
     var getService: GetService!
     var mockGetService: MockGetService!
 
-    override func setUpWithError() throws {
-        try super.setUpWithError()
+    override func setUp() {
         getService = GetService()
         mockGetService = MockGetService()
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         getService = nil
         mockGetService = nil
-        try super.tearDownWithError()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
-    func testValidResponseWhenSearchAValidWord() throws {
+    func testPromiseResponseWhenSearchASingleWord() throws {
         // given
-        let expectation = XCTestExpectation(description: "Promise complete")
+        let exp = expectation(description: "Promise complete")
         let searchedWord = "Swift"
 
         // when
-        mockGetService.getBooks(term: searchedWord)
-            .done { weatherInfo in
-                // then
-                XCTAssertNotNil(weatherInfo)
-                expectation.fulfill()
-            }
-            .catch { error in
-                XCTFail(error.localizedDescription)
-            }
-
-        wait(for: [expectation], timeout: 10.0)
-    }
-
-    func testValidResponseWhenSearchAInvalidWord() throws {
-        // given
-        let exp = expectation(description: "Promise complete")
-        let searchedWord = "#@%@$"
-
-        // when
         getService.getBooks(term: searchedWord)
-            .done { weatherInfo in
+            .done { data in
                 // then
-                XCTAssertNotNil(weatherInfo)
+                XCTAssertNotNil(data)
                 exp.fulfill()
             }
             .catch { error in
@@ -90,17 +63,61 @@ class ServiceBookSearchTests: XCTestCase {
         waitForExpectations(timeout: 5)
     }
 
-    func testCatchPromiseKitResponseError() {
+    func testPromiseResponseWhenSearchAPhrase() throws {
+        // given
         let exp = expectation(description: "Promise complete")
+        let searchedWord = "Swift and Tests"
 
-        mockGetService.getBooks(term: "")
-            .done { weatherInfo in
+        // when
+        getService.getBooks(term: searchedWord)
+            .done { data in
                 // then
-                XCTAssertNotNil(weatherInfo)
+                XCTAssertNotNil(data)
                 exp.fulfill()
             }
             .catch { error in
                 XCTFail(error.localizedDescription)
+            }
+
+        waitForExpectations(timeout: 5)
+    }
+
+    func testPromiseResponseValuesWhenSearchACommonWord() throws {
+        // given
+        let exp = expectation(description: "Promise complete")
+        let searchedWord = "Swift"
+
+        // when
+        getService.getBooks(term: searchedWord)
+            .done { data in
+                // then
+                XCTAssertNotNil(data)
+                XCTAssertEqual(data.resultCount, 50)
+                XCTAssertEqual(data.results?.isEmpty, false)
+                exp.fulfill()
+            }
+            .catch { error in
+                XCTFail(error.localizedDescription)
+            }
+
+        waitForExpectations(timeout: 5)
+    }
+
+    func testPromiseCatchWhenAnErrorOccur() throws {
+        // given
+        let exp = expectation(description: "Promise complete")
+        let searchedWord = "Swift"
+        getService = GetService(urlSession: MockURLSession()) // Redefinition of GetService with Mock
+
+        // when
+        getService.getBooks(term: searchedWord)
+            .done { _ in
+                XCTFail("Promise didn't fail when it supposed to")
+            }
+            .catch { error in
+                // then
+                XCTAssertNotNil(error)
+                XCTAssertEqual("\(error)", "\(ServiceError.internetConnectionError)")
                 exp.fulfill()
             }
 

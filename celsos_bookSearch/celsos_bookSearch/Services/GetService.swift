@@ -9,21 +9,31 @@ import Foundation
 import PromiseKit
 
 class GetService {
+
+    private var urlSession: UrlSessionProtocol
+    private var serviceError = ServiceError.self
+
+    init(urlSession: UrlSessionProtocol = URLSession.shared) {
+        self.urlSession = urlSession
+    }
+
     func getBooks(term: String) -> Promise<SearchResult> {
         // Solution for: Term with blank spaces between words
         let termWithoutSpaces = term.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-
-        // Another approach:
-        //let termWithoutSpaces:String = term.replacingOccurrences(of: " ", with: "%20")
         
         let urlString = "https://itunes.apple.com/search?term=\(termWithoutSpaces ?? "")&entity=ibook"
-        let url = URL(string: urlString)!
+
+
+        guard let url = URL(string: urlString) else { return Promise.init(error: serviceError.urlMalFormatted)}
 
         return firstly {
-            URLSession.shared.dataTask(.promise, with: url)
+            urlSession.dataTask(.promise, with: url)
         }.compactMap {
             return try JSONDecoder().decode(SearchResult.self, from: $0.data)
         }
     }
 }
 
+protocol UrlSessionProtocol {
+    func dataTask(_: PMKNamespacer, with convertible: URLRequestConvertible) -> Promise<(data: Data, response: URLResponse)>
+}

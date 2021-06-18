@@ -53,6 +53,7 @@ class celsos_bookSearchUITests: XCTestCase {
         XCTAssertTrue(app.tables.cells.staticTexts["Swift"].exists)
     }
 
+    // MARK: - OBS.: Following tests only work with the Keyboard active in Simulator
     func testSearchBarSearchButtonTapDidNotAddEmptyTextOnTableView() {
 
         let app = XCUIApplication()

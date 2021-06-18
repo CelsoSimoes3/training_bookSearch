@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		038875BACA1A3BC1553DD3EE /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21DDEDC9071057A430D08722 /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework */; };
+		6300B900267CBE5B00B76947 /* ServiceErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300B8F8267CBDF700B76947 /* ServiceErrorEnum.swift */; };
+		6300B911267CC7D300B76947 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6300B910267CC7D300B76947 /* URLSessionExtension.swift */; };
 		630629EF2656B4C600551506 /* SearchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630629ED2656B4C600551506 /* SearchesTableViewCell.swift */; };
 		630629F02656B4C600551506 /* SearchesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630629EE2656B4C600551506 /* SearchesTableViewCell.xib */; };
 		630693862677E13C007A366C /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630693842677E13C007A366C /* BooksViewController.swift */; };
@@ -55,6 +57,8 @@
 		0EC476B1C458717E98AB2E30 /* Pods-celsos_bookSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearchTests/Pods-celsos_bookSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		21DDEDC9071057A430D08722 /* Pods_celsos_bookSearch_celsos_bookSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_celsos_bookSearch_celsos_bookSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A0175F680546CAF10F5E13 /* Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-celsos_bookSearch-celsos_bookSearchUITests/Pods-celsos_bookSearch-celsos_bookSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6300B8F8267CBDF700B76947 /* ServiceErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceErrorEnum.swift; sourceTree = "<group>"; };
+		6300B910267CC7D300B76947 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
 		630629ED2656B4C600551506 /* SearchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchesTableViewCell.swift; sourceTree = "<group>"; };
 		630629EE2656B4C600551506 /* SearchesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchesTableViewCell.xib; sourceTree = "<group>"; };
 		630693842677E13C007A366C /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				639B4CBC267A7A1B00142CF7 /* UIViewControlerExtensions.swift */,
+				6300B910267CC7D300B76947 /* URLSessionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				633914F82657DB1A0087998F /* Book.swift */,
 				633915092657F36B0087998F /* SearchResultResponse.swift */,
 				6339150E2657F38E0087998F /* BookResponse.swift */,
+				6300B8F8267CBDF700B76947 /* ServiceErrorEnum.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -524,9 +530,11 @@
 				639B4CBD267A7A1B00142CF7 /* UIViewControlerExtensions.swift in Sources */,
 				633914EF2657D6EE0087998F /* GetService.swift in Sources */,
 				6339150A2657F36B0087998F /* SearchResultResponse.swift in Sources */,
+				6300B911267CC7D300B76947 /* URLSessionExtension.swift in Sources */,
 				6329BA79265D4D4E004D90B6 /* SearchCellViewModel.swift in Sources */,
 				63C0B7562655748100EF30AA /* AppDelegate.swift in Sources */,
 				63C0B7582655748100EF30AA /* SceneDelegate.swift in Sources */,
+				6300B900267CBE5B00B76947 /* ServiceErrorEnum.swift in Sources */,
 				633914F92657DB1A0087998F /* Book.swift in Sources */,
 				63C0B7602655748100EF30AA /* celsos_bookSearch.xcdatamodeld in Sources */,
 				6339150F2657F38E0087998F /* BookResponse.swift in Sources */,
