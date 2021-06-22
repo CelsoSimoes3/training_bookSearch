@@ -91,6 +91,5 @@ class celsos_bookSearchUITests: XCTestCase {
 
         XCTAssertTrue(invalidWordAlert.exists)
         XCTAssertTrue(invalidWordAlert.buttons["Ok"].exists)
-
     }
 }
