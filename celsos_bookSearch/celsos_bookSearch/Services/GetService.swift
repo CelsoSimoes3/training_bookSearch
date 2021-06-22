@@ -6,41 +6,34 @@
 // swiftlint:disable all
 
 import Foundation
-//import PromiseKit
+import PromiseKit
 
-//class GetService
-// TO DO
-// Formato tirado de um POST. GET a construir
-//class GetService {
-//
-//    static var baseURL = ""
-//
-//    func postLogin(_ emailText: String, _ passwordText: String) {
-//
-//        guard let url = URL(string: "\(GetService.baseURL)login") else { return }
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "GET"
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.setValue("application/json", forHTTPHeaderField: "Accept")
-//        let usuario = Book(from: <#Decoder#>)
-//
-//        guard let jsonData = try? JSONEncoder().encode(usuario) else { return }
-//        request.httpBody = jsonData
-//
-//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//            guard let data = data,
-//                  let response = response as? HTTPURLResponse,
-//                  error == nil else { // check for fundamental networking error
-//                print("error", error ?? "Unknown error")
-//                return
-//            }
-//
-//            guard (200 ... 299) ~= response.statusCode
-//            else {  // check for http errors
-//                return
-//            }
-//        }
-//        task.resume()
-//
-//    }
-//}
+class GetService {
+
+    private var urlSession: UrlSessionProtocol
+    private var serviceError = ServiceError.self
+
+    init(urlSession: UrlSessionProtocol = URLSession.shared) {
+        self.urlSession = urlSession
+    }
+
+    func getBooks(term: String) -> Promise<SearchResult> {
+        // Solution for: Term with blank spaces between words
+        let termWithoutSpaces = term.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        let urlString = "https://itunes.apple.com/search?term=\(termWithoutSpaces ?? "")&entity=ibook"
+
+
+        guard let url = URL(string: urlString) else { return Promise.init(error: serviceError.urlMalFormatted)}
+
+        return firstly {
+            urlSession.dataTask(.promise, with: url)
+        }.compactMap {
+            return try JSONDecoder().decode(SearchResult.self, from: $0.data)
+        }
+    }
+}
+
+protocol UrlSessionProtocol {
+    func dataTask(_: PMKNamespacer, with convertible: URLRequestConvertible) -> Promise<(data: Data, response: URLResponse)>
+}
